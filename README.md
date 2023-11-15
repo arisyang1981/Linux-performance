@@ -42,9 +42,9 @@ pidstat -h -d -r -u 1 -C test.sh
 Linux 5.10.186-179.751.amzn2.x86_64 (ip-10-0-1-91.ec2.internal)         11/15/23        _x86_64_        (2 CPU)  
        Time   UID       PID    %usr %system  %guest    %CPU   CPU  minflt/s  majflt/s     VSZ    RSS   %MEM   kB_rd/s   kB_wr/s kB_ccwr/s  Command  
  1700069440  1000     15689    4.95   19.80    0.00   24.75     1  32392.08      0.00  121712   2752   0.07      0.00      0.00      0.00  test.sh  
-# Example3, display the resource usage of disk/memory/cpu for a specific program which is running along with pidstat in one line.
-Once test.sh finishes, pidstat will finish at the same time.
- pidstat -h -d -r -u 1 -e test.sh  
- '-e' doesn't work on some platforms for example, AWS Linux2, but works on Rocky9, use 'pidstat --help' to verify if the version supports '-e'.  
+# Example3, display the resource usage of disk/memory/cpu for a specific program which is running along with pidstat in one line.  
+Once test.sh finishes, pidstat will finish at the same time.  
+pidstat -h -d -r -u 1 -e test.sh  
+'-e' doesn't work on some platforms for example, AWS Linux2, but works on Rocky9, use 'pidstat --help' to verify if the version supports '-e'.  
 
 
